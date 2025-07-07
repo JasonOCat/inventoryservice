@@ -3,6 +3,7 @@ package com.jason.inventoryservice.controller;
 import com.jason.inventoryservice.response.EventInventoryResponse;
 import com.jason.inventoryservice.response.VenueInventoryResponse;
 import com.jason.inventoryservice.service.InventoryService;
+import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
