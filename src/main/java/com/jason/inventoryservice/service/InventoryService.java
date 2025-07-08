@@ -41,4 +41,15 @@ public class InventoryService {
     }
 
 
+    public EventInventoryResponse getEventInventory(Long eventId) {
+        final Event event = eventRepository.findById(eventId).orElseThrow(NoSuchElementException::new);
+
+        return EventInventoryResponse.builder()
+                .event(event.getName())
+                .capacity(event.getLeftCapacity())
+                .venue(event.getVenue())
+                .ticketPrice(event.getTicketPrice())
+                .eventId(event.getId())
+                .build();
+    }
 }

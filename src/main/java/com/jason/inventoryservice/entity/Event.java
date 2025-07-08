@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -25,4 +27,7 @@ public class Event {
     @ManyToOne
     @JoinColumn(name = "venue_id")
     private Venue venue;
+
+    @Column(name = "ticket_price")
+    private BigDecimal ticketPrice;
 }
